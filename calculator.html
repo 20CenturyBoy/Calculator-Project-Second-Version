@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calculator
+        {
+            width:fit-content;
+            border: black solid 1px;
+        }
+
+        button,#display{
+            font-size: 35px;
+        }
+
+        button{
+            width:50px;
+            height:50px;
+            border:white solid 1px;
+            margin:0px;
+            padding:0px;
+        }
+
+        #display{
+            height:50px;
+            border: black solid 1px;
+            margin-bottom:3px;
+            display: flex;
+        }
+
+        .operator, #equal  {
+            background-color:aquamarine;
+        }
+
+        #delete{
+            background-color: #ff00009a;
+        }
+
+        #deleteAll{
+            background-color: red;
+        }
+
+        #top-row{
+            display:flex;
+        }
+        
+        .dell-button{
+            flex-grow : 1;
+        }
+
+        .row{
+            display:flex;
+        }
+
+        #equal{
+            flex-grow: 1 ;
+        }
+    </style>
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">
+            <div id="first-operand"></div>
+            <div id="operator"></div>
+            <div id="second-operand"></div>
+        </div>
+        <div id="top-row">
+            <button class="dell-button" id="deleteAll"> <- </button>
+            <button class="dell-button" id="delete"> < </button>
+            <button class="operator">+</button>
+        </div>
+        <div class="digit-group row">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">-</button>
+        </div>
+        <div class="digit-group row">
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">*</button>
+        </div>
+        <div class="digit-group row">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">/</button>
+        </div> 
+        <div class="digit-group row">
+            <button class="number">0</button>
+            <button>.</button>
+            <button id="equal">=</button>   
+        </div> 
+    </div>
+</body>
+</html>
